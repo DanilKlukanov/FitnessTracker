@@ -4,4 +4,13 @@
     <string name="registration">Зарегистрироваться</string>
     <string name="HeadingWelcomeText">Пожалуй, лучший фитнес трекер в ДВФУ</string>
     <string name="Text_log_in">Уже есть аккаунт?</string>
+    <string name="hint_password">Пароль</string>
+    <string name="hint_login">Логин</string>
+    <string name="button_log_in" >Войти</string>
+    <string name="hint_name_nickname">Имя или никнейм</string>
+    <string name="hint_again_password">Повторите пароль</string>
+    <string name="text_sex">Пол</string>
+    <string name="radio_sex_male">Мужской</string>
+    <string name="radio_sex_female">Женский</string>
+    <string name="radio_sex_another">Другое</string>
 </resources>
