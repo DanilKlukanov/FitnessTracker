@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.text.set
+import androidx.core.text.toSpannable
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitnesstracker.R
@@ -18,9 +19,9 @@ class RegistrationScreen : Fragment(R.layout.registration_screen) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val text_span = SpannableString("Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение")
+        val text_span = ("Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение").toSpannable()
 
-        text_span[37..36] = object: ClickableSpan(){
+        text_span[27 .. 66] = object: ClickableSpan(){
             override fun updateDrawState(text: TextPaint) {
                 text.color = text.linkColor
                 text.isUnderlineText = false
@@ -30,7 +31,7 @@ class RegistrationScreen : Fragment(R.layout.registration_screen) {
             }
         }
 
-        text_span[text_span.length - 27..text_span.length] = object: ClickableSpan(){
+        text_span[text_span.length - 27 .. text_span.length] = object: ClickableSpan(){
             override fun updateDrawState(text: TextPaint) {
                 text.color = text.linkColor
                 text.isUnderlineText = false
