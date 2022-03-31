@@ -18,9 +18,10 @@
 
     <ScrollView
         android:id="@+id/scrollview"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toTopOf="@id/Name_or_nicknameInput"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/Name_or_nicknameInput">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -142,24 +143,27 @@
                 <RadioButton
                     android:id="@+id/radioVibrateOne"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
+                    android:layout_height="wrap_content"
                     android:checked="true"
+                    android:minHeight="0sp"
                     android:text="@string/radio_sex_male"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/radioVibrateTwo"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0sp"
                     android:text="@string/radio_sex_female"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/radioVibrateThree"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0sp"
                     android:text="@string/radio_sex_another"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
             </RadioGroup>
 
             <Button
@@ -181,8 +185,8 @@
                 android:id="@+id/hello"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
                 android:textColor="#101010"
