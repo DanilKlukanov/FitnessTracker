@@ -17,16 +17,14 @@ class MyActivityScreen : Fragment(R.layout.my_activity_screen) {
     private val activityData = CardsData()
 
     private val adapter = RecyclerViewAdapter {
-        val bundle = Bundle()
-        bundle.putString("Distance", it.distance)
-        bundle.putString("Period", it.period)
-        bundle.putString("TypeActivity", it.typeActivity)
-        bundle.putString("DateActivity", it.dateActivity)
-        bundle.putInt("CardType", it.cardType.ordinal)
-
         findNavController().navigate(
-            R.id.action_activityScreen_to_workoutDetailsScreen,
-            bundle
+            ActivityScreenDirections.actionActivityScreenToWorkoutDetailsScreen(
+                it.distance,
+                it.period,
+                it.typeActivity,
+                it.dateActivity,
+                it.cardType,
+            )
         )
     }
 

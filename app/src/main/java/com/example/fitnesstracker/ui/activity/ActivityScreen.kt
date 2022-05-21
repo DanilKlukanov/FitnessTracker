@@ -22,10 +22,10 @@ class ActivityScreen : Fragment(R.layout.activity_screen) {
         TabLayoutMediator(tabLayout, pager) { tab, position ->
             when (position) {
                 0 -> {
-                    tab.text = "Моя"
+                    tab.text = resources.getString(R.string.My)
                 }
                 1 -> {
-                    tab.text = "Пользователей"
+                    tab.text = resources.getString(R.string.Users)
                 }
             }
         }.attach()

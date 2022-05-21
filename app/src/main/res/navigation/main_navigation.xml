@@ -11,20 +11,61 @@
     <fragment
         android:id="@+id/activityScreen"
         android:name="com.example.fitnesstracker.ui.activity.ActivityScreen"
-        android:label="ActivityScreen" >
+        android:label="ActivityScreen">
         <action
             android:id="@+id/action_activityScreen_to_workoutDetailsScreen"
             app:destination="@id/navigation"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+            <argument
+                android:name="distance"
+                app:argType="string" />
+            <argument
+                android:name="period"
+                app:argType="string" />
+            <argument
+                android:name="typeActivity"
+                app:argType="string" />
+            <argument
+                android:name="dateActivity"
+                app:argType="string" />
+            <argument
+                android:name="cardType"
+                app:argType="com.example.fitnesstracker.domain.entiry.CardType" />
+            <argument
+                android:name="nickname"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
     </fragment>
-    <navigation android:id="@+id/navigation"
+    <navigation
+        android:id="@+id/navigation"
         app:startDestination="@id/workoutDetailsScreen">
         <fragment
             android:id="@+id/workoutDetailsScreen"
             android:name="com.example.fitnesstracker.ui.activity.WorkoutDetailsScreen"
-            android:label="WorkoutDetailsScreen" />
+            android:label="WorkoutDetailsScreen">
+            <argument
+                android:name="distance"
+                app:argType="string" />
+            <argument
+                android:name="period"
+                app:argType="string" />
+            <argument
+                android:name="typeActivity"
+                app:argType="string" />
+            <argument
+                android:name="dateActivity"
+                app:argType="string" />
+            <argument
+                android:name="cardType"
+                app:argType="com.example.fitnesstracker.domain.entiry.CardType" />
+            <argument
+                android:name="nickname"
+                android:defaultValue=""
+                app:argType="string" />
+        </fragment>
     </navigation>
 </navigation>
