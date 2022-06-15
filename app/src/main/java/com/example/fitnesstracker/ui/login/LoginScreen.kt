@@ -1,7 +1,8 @@
-package com.example.fitnesstracker.fragments
+package com.example.fitnesstracker.ui.login
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -15,5 +16,8 @@ class LoginScreen : Fragment(R.layout.login_screen) {
             findNavController().navigateUp()
         }
 
+        view.findViewById<Button>(R.id.BtnLogin).setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+        }
     }
 }

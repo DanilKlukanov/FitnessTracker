@@ -1,11 +1,11 @@
-package com.example.fitnesstracker.fragments
+package com.example.fitnesstracker.ui.login
 
 import android.os.Bundle
-import android.text.SpannableString
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -47,6 +47,10 @@ class RegistrationScreen : Fragment(R.layout.registration_screen) {
 
         view.findViewById<Toolbar>(R.id.toolbar).setNavigationOnClickListener {
             findNavController().navigateUp()
+        }
+
+        view.findViewById<Button>(R.id.Btn_registration).setOnClickListener {
+            findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
         }
     }
 }

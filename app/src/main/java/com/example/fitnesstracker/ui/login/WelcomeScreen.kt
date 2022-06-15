@@ -1,4 +1,4 @@
-package com.example.fitnesstracker.fragments
+package com.example.fitnesstracker.ui.login
 
 import android.os.Bundle
 import android.view.View
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.fitnesstracker.R
 
-class MainScreen : Fragment(R.layout.main_screen) {
+class WelcomeScreen : Fragment(R.layout.welcome_screen) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

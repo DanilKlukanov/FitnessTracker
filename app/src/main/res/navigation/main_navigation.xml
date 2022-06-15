@@ -2,33 +2,70 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/mainScreen">
+    app:startDestination="@id/profileScreen">
 
     <fragment
-        android:id="@+id/loginScreen"
-        android:name="com.example.fitnesstracker.fragments.LoginScreen"
-        android:label="LoginScreen" />
+        android:id="@+id/profileScreen"
+        android:name="com.example.fitnesstracker.ui.ProfileScreen"
+        android:label="ProfileScreen" />
     <fragment
-        android:id="@+id/mainScreen"
-        android:name="com.example.fitnesstracker.fragments.MainScreen"
-        android:label="MainScreen">
+        android:id="@+id/activityScreen"
+        android:name="com.example.fitnesstracker.ui.activity.ActivityScreen"
+        android:label="ActivityScreen">
         <action
-            android:id="@+id/action_mainScreen_to_registrationScreen"
-            app:destination="@id/registrationScreen"
+            android:id="@+id/action_activityScreen_to_workoutDetailsScreen"
+            app:destination="@id/navigation"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
-            android:id="@+id/action_mainScreen_to_loginScreen"
-            app:destination="@id/loginScreen"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+            <argument
+                android:name="distance"
+                app:argType="string" />
+            <argument
+                android:name="period"
+                app:argType="string" />
+            <argument
+                android:name="typeActivity"
+                app:argType="string" />
+            <argument
+                android:name="dateActivity"
+                app:argType="string" />
+            <argument
+                android:name="cardType"
+                app:argType="com.example.fitnesstracker.domain.entiry.CardType" />
+            <argument
+                android:name="nickname"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
     </fragment>
-    <fragment
-        android:id="@+id/registrationScreen"
-        android:name="com.example.fitnesstracker.fragments.RegistrationScreen"
-        android:label="RegistrationScreen" />
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/workoutDetailsScreen">
+        <fragment
+            android:id="@+id/workoutDetailsScreen"
+            android:name="com.example.fitnesstracker.ui.activity.WorkoutDetailsScreen"
+            android:label="WorkoutDetailsScreen">
+            <argument
+                android:name="distance"
+                app:argType="string" />
+            <argument
+                android:name="period"
+                app:argType="string" />
+            <argument
+                android:name="typeActivity"
+                app:argType="string" />
+            <argument
+                android:name="dateActivity"
+                app:argType="string" />
+            <argument
+                android:name="cardType"
+                app:argType="com.example.fitnesstracker.domain.entiry.CardType" />
+            <argument
+                android:name="nickname"
+                android:defaultValue=""
+                app:argType="string" />
+        </fragment>
+    </navigation>
 </navigation>

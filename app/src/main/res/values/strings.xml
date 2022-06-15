@@ -13,4 +13,25 @@
     <string name="radio_sex_male">Мужской</string>
     <string name="radio_sex_female">Женский</string>
     <string name="radio_sex_another">Другое</string>
+    <string name="_14_32">14.32 км</string>
+    <string name="van_darkholme">\@van_darkholme</string>
+    <string name="_2_46">2 часа 46 минут</string>
+    <string name="surfing">Серфинг</string>
+    <string name="_14">14 часов назад</string>
+    <string name="Evening">Вчера</string>
+    <string name="_1_42">1 час 42 мин</string>
+    <string name="Start">Старт</string>
+    <string name="_14_49">14:49</string>
+    <string name="Finish">Финиш</string>
+    <string name="_16_31">16:31</string>
+    <string name="Comment">Комментарий</string>
+    <string name="Delete">Удалить</string>
+    <string name="Share">Поделиться</string>
+    <string name="Activity">Активность</string>
+    <string name="Profile">Профиль</string>
+    <string name="Workout_time">Время потренить</string>
+    <string name="Tap_text">Нажимай на кнопку ниже и начинаем трекать активность</string>
+    <string name='My'>Мое</string>
+    <string name='Users'>Пользователей</string>
+    <string name="Add_button">Add button</string>
 </resources>
