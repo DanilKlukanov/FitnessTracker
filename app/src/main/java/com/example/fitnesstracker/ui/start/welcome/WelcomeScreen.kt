@@ -1,4 +1,4 @@
-package com.example.fitnesstracker.ui.login
+package com.example.fitnesstracker.ui.start.welcome
 
 import android.os.Bundle
 import android.view.View
@@ -19,6 +19,5 @@ class WelcomeScreen : Fragment(R.layout.welcome_screen) {
         view.findViewById<TextView>(R.id.text_log_in).setOnClickListener {
             findNavController().navigate(R.id.action_mainScreen_to_loginScreen)
         }
-
     }
 }

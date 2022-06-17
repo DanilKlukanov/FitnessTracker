@@ -14,5 +14,16 @@
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
         <!-- Customize your theme here. -->
         <item name="colorControlNormal">@color/purple_500</item>
+        <item name="actionMenuTextAppearance">@style/ToolbarMenuItemStyle</item>
     </style>
+
+    <style name="ToolbarStyle" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="actionMenuTextColor">@color/purple_500</item>
+    </style>
+
+    <style name="ToolbarMenuItemStyle" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

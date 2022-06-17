@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/profileScreen"
-        android:name="com.example.fitnesstracker.ui.ProfileScreen"
+        android:name="com.example.fitnesstracker.ui.profile.ProfileScreen"
         android:label="ProfileScreen" />
     <fragment
         android:id="@+id/activityScreen"
