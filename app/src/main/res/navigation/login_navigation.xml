@@ -6,21 +6,11 @@
 
     <fragment
         android:id="@+id/loginScreen"
-        android:name="com.example.fitnesstracker.ui.login.LoginScreen"
-        android:label="LoginScreen" >
-        <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainScreen"
-            app:popUpTo="@id/login_navigation"
-            app:popUpToInclusive="true"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
-    </fragment>
+        android:name="com.example.fitnesstracker.ui.start.login.LoginScreen"
+        android:label="LoginScreen" />
     <fragment
         android:id="@+id/welcomScreen"
-        android:name="com.example.fitnesstracker.ui.login.WelcomeScreen"
+        android:name="com.example.fitnesstracker.ui.start.welcome.WelcomeScreen"
         android:label="MainScreen">
         <action
             android:id="@+id/action_mainScreen_to_registrationScreen"
@@ -39,20 +29,6 @@
     </fragment>
     <fragment
         android:id="@+id/registrationScreen"
-        android:name="com.example.fitnesstracker.ui.login.RegistrationScreen"
-        android:label="RegistrationScreen" >
-        <action
-            android:id="@+id/action_registrationFragment_to_mainFragment"
-            app:destination="@id/mainScreen"
-            app:popUpTo="@id/login_navigation"
-            app:popUpToInclusive="true"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
-    </fragment>
-    <fragment
-        android:id="@+id/mainScreen"
-        android:name="com.example.fitnesstracker.ui.MainScreen"
-        android:label="MainScreen" />
+        android:name="com.example.fitnesstracker.ui.start.registration.RegistrationScreen"
+        android:label="RegistrationScreen" />
 </navigation>
